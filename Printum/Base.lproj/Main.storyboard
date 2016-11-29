@@ -79,6 +79,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qwc-XQ-tQi" firstAttribute="height" secondItem="O0r-JY-joL" secondAttribute="height" constant="-214" id="1fr-Dk-RPt"/>
                             <constraint firstItem="qwc-XQ-tQi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1kl-Yw-WYK"/>
