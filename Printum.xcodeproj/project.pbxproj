@@ -16,6 +16,8 @@
 		2909D7621DED9D0100AE88CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2909D7601DED9D0100AE88CF /* LaunchScreen.storyboard */; };
 		2909D76D1DED9D0100AE88CF /* PrintumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909D76C1DED9D0100AE88CF /* PrintumTests.m */; };
 		2909D7781DED9D0100AE88CF /* PrintumUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909D7771DED9D0100AE88CF /* PrintumUITests.m */; };
+		2909D7861DED9E0F00AE88CF /* kotanprintum10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2909D7851DED9E0F00AE88CF /* kotanprintum10.png */; };
+		2909D7881DEDA12300AE88CF /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2909D7871DEDA12300AE88CF /* 2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		2909D7731DED9D0100AE88CF /* PrintumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2909D7771DED9D0100AE88CF /* PrintumUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintumUITests.m; sourceTree = "<group>"; };
 		2909D7791DED9D0100AE88CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2909D7851DED9E0F00AE88CF /* kotanprintum10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kotanprintum10.png; sourceTree = "<group>"; };
+		2909D7871DEDA12300AE88CF /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 		2909D74F1DED9D0100AE88CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2909D7871DEDA12300AE88CF /* 2.jpg */,
+				2909D7851DED9E0F00AE88CF /* kotanprintum10.png */,
 				2909D7501DED9D0100AE88CF /* main.m */,
 			);
 			name = "Supporting Files";
@@ -251,6 +257,8 @@
 			files = (
 				2909D7621DED9D0100AE88CF /* LaunchScreen.storyboard in Resources */,
 				2909D75F1DED9D0100AE88CF /* Assets.xcassets in Resources */,
+				2909D7881DEDA12300AE88CF /* 2.jpg in Resources */,
+				2909D7861DED9E0F00AE88CF /* kotanprintum10.png in Resources */,
 				2909D75A1DED9D0100AE88CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
