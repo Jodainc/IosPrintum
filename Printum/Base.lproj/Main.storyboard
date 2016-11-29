@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="FCA9D4D7-4A69-4A79-A1CF-09AC9E964FEF" translatesAutoresizingMaskIntoConstraints="NO" id="O0r-JY-joL">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="B4B0E244-3610-4561-B640-93F13A5AF4D8" translatesAutoresizingMaskIntoConstraints="NO" id="O0r-JY-joL">
                                 <rect key="frame" x="0.0" y="64" width="320" height="155"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O0r-JY-joL" secondAttribute="height" multiplier="325:149" constant="-18.087248322147673" id="BP4-Tc-I9g"/>
@@ -511,12 +511,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4e-c8-viv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-94" y="-30"/>
         </scene>
     </scenes>
     <resources>
         <image name="2.jpg" width="290" height="400"/>
-        <image name="FCA9D4D7-4A69-4A79-A1CF-09AC9E964FEF" width="175" height="100">
+        <image name="B4B0E244-3610-4561-B640-93F13A5AF4D8" width="175" height="100">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

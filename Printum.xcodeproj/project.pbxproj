@@ -596,6 +596,7 @@
 				2909D77E1DED9D0100AE88CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2909D77F1DED9D0100AE88CF /* Build configuration list for PBXNativeTarget "PrintumTests" */ = {
 			isa = XCConfigurationList;
@@ -604,6 +605,7 @@
 				2909D7811DED9D0100AE88CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2909D7821DED9D0100AE88CF /* Build configuration list for PBXNativeTarget "PrintumUITests" */ = {
 			isa = XCConfigurationList;
@@ -612,6 +614,7 @@
 				2909D7841DED9D0100AE88CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
