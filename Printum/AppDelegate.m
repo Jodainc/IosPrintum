@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "User.h"
 @interface AppDelegate ()
 
 @end
@@ -16,8 +16,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
+    User *userObj = [[User alloc] init];
+    self.authenticated = [userObj userAuthenticated];
+    NSLog(@"Bool value: %d",[userObj userAuthenticated]);
+    NSLog(@"bool %s", self.authenticated ? "true" : "false");
+    if (self.authenticated)
+    {
+        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+    }
+    else
+    {
+        UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"initialView"];
+        UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
+        
+        self.window.rootViewController = navigation;
+    }
     return YES;
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2900E2BE1DEF47D600105299 /* Contacts Filled-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 2900E2BD1DEF47D600105299 /* Contacts Filled-20.png */; };
+		2900E2C01DEF487400105299 /* News Filled-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 2900E2BF1DEF487400105299 /* News Filled-20.png */; };
 		29037B6D1DEE22FB0095E136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29037B6C1DEE22FB0095E136 /* Main.storyboard */; };
 		2909D7511DED9D0100AE88CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909D7501DED9D0100AE88CF /* main.m */; };
 		2909D7541DED9D0100AE88CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909D7531DED9D0100AE88CF /* AppDelegate.m */; };
@@ -18,6 +20,10 @@
 		2909D7781DED9D0100AE88CF /* PrintumUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909D7771DED9D0100AE88CF /* PrintumUITests.m */; };
 		2909D7861DED9E0F00AE88CF /* kotanprintum10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2909D7851DED9E0F00AE88CF /* kotanprintum10.png */; };
 		2909D7881DEDA12300AE88CF /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2909D7871DEDA12300AE88CF /* 2.jpg */; };
+		2957ABCD1DEF1EB000B44554 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABCC1DEF1EB000B44554 /* RootViewController.m */; };
+		2957ABD01DEF1EE600B44554 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABCF1DEF1EE600B44554 /* LoginViewController.m */; };
+		2957ABD31DEF1F4700B44554 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABD21DEF1F4700B44554 /* ProfileViewController.m */; };
+		2957ABD61DEF1F9400B44554 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABD51DEF1F9400B44554 /* User.m */; };
 		2976B8381DEE183000119389 /* HseFinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976B8371DEE183000119389 /* HseFinViewController.m */; };
 		2976B83B1DEE184A00119389 /* ProhseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976B83A1DEE184A00119389 /* ProhseViewController.m */; };
 		CAC111408AD8459F70206AF3 /* libPods-Printum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3663F19385F770998C019BFF /* libPods-Printum.a */; };
@@ -42,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		2204B55530747DF2F7C098A6 /* Pods-Printum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Printum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Printum/Pods-Printum.debug.xcconfig"; sourceTree = "<group>"; };
+		2900E2BD1DEF47D600105299 /* Contacts Filled-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts Filled-20.png"; sourceTree = "<group>"; };
+		2900E2BF1DEF487400105299 /* News Filled-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News Filled-20.png"; sourceTree = "<group>"; };
 		29037B6C1DEE22FB0095E136 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2909D74C1DED9D0100AE88CF /* Printum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Printum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2909D7501DED9D0100AE88CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,6 +69,14 @@
 		2909D7791DED9D0100AE88CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2909D7851DED9E0F00AE88CF /* kotanprintum10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kotanprintum10.png; sourceTree = "<group>"; };
 		2909D7871DEDA12300AE88CF /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		2957ABCB1DEF1EB000B44554 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		2957ABCC1DEF1EB000B44554 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		2957ABCE1DEF1EE600B44554 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2957ABCF1DEF1EE600B44554 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2957ABD11DEF1F4700B44554 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		2957ABD21DEF1F4700B44554 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		2957ABD41DEF1F9400B44554 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
+		2957ABD51DEF1F9400B44554 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		2976B8361DEE183000119389 /* HseFinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HseFinViewController.h; path = ../HseFinViewController.h; sourceTree = "<group>"; };
 		2976B8371DEE183000119389 /* HseFinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HseFinViewController.m; path = ../HseFinViewController.m; sourceTree = "<group>"; };
 		2976B8391DEE184A00119389 /* ProhseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProhseViewController.h; sourceTree = "<group>"; };
@@ -144,6 +160,14 @@
 				2976B8361DEE183000119389 /* HseFinViewController.h */,
 				2976B8371DEE183000119389 /* HseFinViewController.m */,
 				2976B8391DEE184A00119389 /* ProhseViewController.h */,
+				2957ABCB1DEF1EB000B44554 /* RootViewController.h */,
+				2957ABCC1DEF1EB000B44554 /* RootViewController.m */,
+				2957ABCE1DEF1EE600B44554 /* LoginViewController.h */,
+				2957ABCF1DEF1EE600B44554 /* LoginViewController.m */,
+				2957ABD11DEF1F4700B44554 /* ProfileViewController.h */,
+				2957ABD21DEF1F4700B44554 /* ProfileViewController.m */,
+				2957ABD41DEF1F9400B44554 /* User.h */,
+				2957ABD51DEF1F9400B44554 /* User.m */,
 				29037B6C1DEE22FB0095E136 /* Main.storyboard */,
 				2976B83A1DEE184A00119389 /* ProhseViewController.m */,
 				2909D75E1DED9D0100AE88CF /* Assets.xcassets */,
@@ -158,6 +182,8 @@
 		2909D74F1DED9D0100AE88CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2900E2BF1DEF487400105299 /* News Filled-20.png */,
+				2900E2BD1DEF47D600105299 /* Contacts Filled-20.png */,
 				2909D7871DEDA12300AE88CF /* 2.jpg */,
 				2909D7851DED9E0F00AE88CF /* kotanprintum10.png */,
 				2909D7501DED9D0100AE88CF /* main.m */,
@@ -293,10 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2909D7621DED9D0100AE88CF /* LaunchScreen.storyboard in Resources */,
+				2900E2C01DEF487400105299 /* News Filled-20.png in Resources */,
 				29037B6D1DEE22FB0095E136 /* Main.storyboard in Resources */,
 				2909D75F1DED9D0100AE88CF /* Assets.xcassets in Resources */,
 				2909D7881DEDA12300AE88CF /* 2.jpg in Resources */,
 				2909D7861DED9E0F00AE88CF /* kotanprintum10.png in Resources */,
+				2900E2BE1DEF47D600105299 /* Contacts Filled-20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +397,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2957ABD61DEF1F9400B44554 /* User.m in Sources */,
+				2957ABD01DEF1EE600B44554 /* LoginViewController.m in Sources */,
+				2957ABD31DEF1F4700B44554 /* ProfileViewController.m in Sources */,
 				2909D7571DED9D0100AE88CF /* ViewController.m in Sources */,
+				2957ABCD1DEF1EB000B44554 /* RootViewController.m in Sources */,
 				2909D7541DED9D0100AE88CF /* AppDelegate.m in Sources */,
 				2976B8381DEE183000119389 /* HseFinViewController.m in Sources */,
 				2976B83B1DEE184A00119389 /* ProhseViewController.m in Sources */,
