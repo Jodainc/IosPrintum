@@ -180,6 +180,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PrintumApp" id="NZc-os-gHY" colorLabel="IBBuiltInLabel-Red"/>
+                    <connections>
+                        <outlet property="trollPass" destination="K5c-qK-ruv" id="Gm0-ik-gAG"/>
+                        <outlet property="userName" destination="LSH-4F-GGt" id="uhU-bq-uLu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

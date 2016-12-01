@@ -13,6 +13,8 @@
 @end
 
 @implementation LoginViewController
+@synthesize userName;
+@synthesize trollPass;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,8 +37,10 @@
 }
 - (IBAction)submitBtnPressed:(id)sender {
     User *userObj = [[User alloc] init];
-    NSString *username = @"username retrieved through login form";
-    NSString *password = @"password retrieved through login form";
+    NSString *username = userName.text;
+    NSString *password = trollPass.text;
+    NSLog(@"%@ nombre::: ",username);
+     NSLog(@"%@ npass::: ",password);
     [userObj loginWithUsername:username andPassword:password];
 }
 @end
