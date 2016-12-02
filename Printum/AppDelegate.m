@@ -79,13 +79,10 @@
     
     // Enable Activity Indicator Spinner
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
     NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"TrollToken"];
-    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserList"];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userName" ascending:YES];
     fetchRequest.sortDescriptors = @[descriptor];
-    
     NSUInteger count = [context countForFetchRequest:fetchRequest error:&error];
     NSLog(@"%lu  numero aut1",(unsigned long)count);
     if (count>0)
@@ -99,53 +96,43 @@
         
         self.window.rootViewController = navigation;
     }
-    
-    
-    
     return YES;
-}
-
-
-- (void)setupRestKit
-{
-    // initiate Object Manager, Model & Store
-    RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://192.168.0.98:8080"]];
-    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    manager.managedObjectStore = managedObjectStore;
-    
-    // define Entity mapping to core data
-    RKEntityMapping *userMapping = [RKEntityMapping mappingForEntityForName:@"TrollToken" inManagedObjectStore:managedObjectStore];
-    userMapping.identificationAttributes = @[ @"userName" ];
-    NSArray *mappingArray = @[@"userName", @"trollToken", @"token_type"];
-    [userMapping addAttributeMappingsFromArray:mappingArray];
-    
-    // Core Data stack initialization
-    [managedObjectStore createPersistentStoreCoordinator];
-    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"Printum.sqlite"];
-    NSError *error;
-    NSPersistentStore *persistentStore =
-    [managedObjectStore addSQLitePersistentStoreAtPath:storePath
-                                fromSeedDatabaseAtPath:nil
-                                     withConfiguration:nil
-                                               options:@{
-                                                         NSMigratePersistentStoresAutomaticallyOption:@YES,
-                                                         NSInferMappingModelAutomaticallyOption:@YES
-                                                         }
-                                                 error:&error];
-    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
-    
-    // Create the managed object contexts
-    [managedObjectStore createManagedObjectContexts];
-    // Configure a managed object cache to ensure we do not create duplicate objects
-    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc]
-                                             initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 
 }
+- (void) deleteAllObjects:(NSString *) entityDescription2  {
+    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:entityDescription2];
+    [fetchRequest setIncludesPropertyValues:YES];
+    NSError *error;
+    error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *object in fetchedObjects)
+    {
+        [context deleteObject:object];
+    }
+    NSFetchRequest *fetchRequest1 = [[NSFetchRequest alloc] initWithEntityName:@"UserList"];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userName" ascending:YES];
+    fetchRequest1.sortDescriptors = @[descriptor];
+    NSUInteger count = [context countForFetchRequest:fetchRequest1 error:&error];
+    NSLog(@"%lu  numero aut12",(unsigned long)count);
 
+    if (![context save:&error]) {
+        NSLog(@"Save Failed! %@ %@", error, [error localizedDescription]);
+    }
+    NSPersistentStore *store = [self.persistentStoreCoordinator.persistentStores lastObject];
+    NSURL *storeURL = store.URL;
+    [self.persistentStoreCoordinator removePersistentStore:store error:&error];
+    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:&error];
+    NSLog(@"Data Reset");
+    
+    //Make new persistent store for future saves   (Taken From Above Answer)
+    if (![self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+        // do something with the error
+    }
+}
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     

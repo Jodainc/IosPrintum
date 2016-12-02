@@ -56,7 +56,10 @@
 
 
 - (IBAction)logoutAction:(id)sender {
-    User *userObj = [[User alloc] init];
+           User *userObj = [[User alloc] init];
+    AppDelegate *app = [[AppDelegate alloc]init];
+    [app deleteAllObjects:@"UserList"];
+    [app resetApplicationModel];
     [userObj logout];
     AppDelegate *authObj = (AppDelegate*)[[UIApplication sharedApplication] delegate];authObj.authenticated = YES;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -64,17 +67,7 @@
     RootViewController *initView =  (RootViewController*)[storyboard instantiateViewControllerWithIdentifier:@"initialView"];
     [initView setModalPresentationStyle:UIModalPresentationFullScreen];
     [self presentViewController:initView animated:NO completion:nil];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"TrollToken"];
-    [fetchRequest setIncludesPropertyValues:NO]; //only fetch the managedObjectID
-    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
-    NSError *error;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    for (NSManagedObject *object in fetchedObjects)
-    {
-        [context deleteObject:object];
+    
     }
-    error = nil;
-    [context save:&error];
-}
 
 @end

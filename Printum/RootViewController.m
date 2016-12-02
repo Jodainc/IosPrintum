@@ -18,6 +18,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSError *error=nil;
+    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"TrollToken"];
+    
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userName" ascending:YES];
+    fetchRequest.sortDescriptors = @[descriptor];
+    
+    NSUInteger count = [context countForFetchRequest:fetchRequest error:&error];
+    NSLog(@"%lu  numero aut10",(unsigned long)count);
 }
 
 - (void)didReceiveMemoryWarning
