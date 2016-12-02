@@ -10,7 +10,9 @@
 @interface User : NSObject
 - (void)loginWithUsername:(NSString *)username andPassword:(NSString *)password;
 - (void)logout;
+- (void)setupManager;
 - (BOOL)userAuthenticated;
+
 @property (nonatomic,assign) BOOL auth;
 
 @end

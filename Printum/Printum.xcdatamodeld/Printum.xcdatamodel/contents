@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="TrollToken" representedClassName="TrollToken" syncable="YES" codeGenerationType="class">
+        <attribute name="expires" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expires_in" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issued" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="token_type" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="trollToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trollTokens" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="UserList" representedClassName="UserList" syncable="YES" codeGenerationType="class">
@@ -14,15 +17,17 @@
         <attribute name="departmentId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="firtsName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trollTokens" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userPhone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userPhoto" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="trolltoken" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrollToken" syncable="YES"/>
+        <relationship name="trollToken" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TrollToken" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TrollToken" positionX="-299" positionY="9" width="128" height="88"/>
-        <element name="UserList" positionX="-63" positionY="9" width="128" height="253"/>
+        <element name="TrollToken" positionX="-299" positionY="9" width="128" height="135"/>
+        <element name="UserList" positionX="-63" positionY="9" width="128" height="285"/>
     </elements>
 </model>

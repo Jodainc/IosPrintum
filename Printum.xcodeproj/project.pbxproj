@@ -24,9 +24,12 @@
 		2957ABD01DEF1EE600B44554 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABCF1DEF1EE600B44554 /* LoginViewController.m */; };
 		2957ABD31DEF1F4700B44554 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABD21DEF1F4700B44554 /* ProfileViewController.m */; };
 		2957ABD61DEF1F9400B44554 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABD51DEF1F9400B44554 /* User.m */; };
+		2973BCCA1DF1D7F400E157F8 /* UserList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973BCC71DF1D7F400E157F8 /* UserList+CoreDataProperties.m */; };
+		2973BCCB1DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973BCC91DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m */; };
 		2976B8381DEE183000119389 /* HseFinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976B8371DEE183000119389 /* HseFinViewController.m */; };
 		2976B83B1DEE184A00119389 /* ProhseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976B83A1DEE184A00119389 /* ProhseViewController.m */; };
-		CAC111408AD8459F70206AF3 /* libPods-Printum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3663F19385F770998C019BFF /* libPods-Printum.a */; };
+		53171018A2749A3AAF271F47 /* libPods-Printum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E4F8A7C8437ECD389BE387 /* libPods-Printum.a */; };
+		CBD5C54AD42ED21573CF7E70 /* libPods-PrintumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC5591C2DA144B851F201EB /* libPods-PrintumTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2204B55530747DF2F7C098A6 /* Pods-Printum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Printum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Printum/Pods-Printum.debug.xcconfig"; sourceTree = "<group>"; };
+		029AA8F09C1984BE93842D92 /* Pods-PrintumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrintumTests/Pods-PrintumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2900E2BD1DEF47D600105299 /* Contacts Filled-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts Filled-20.png"; sourceTree = "<group>"; };
 		2900E2BF1DEF487400105299 /* News Filled-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News Filled-20.png"; sourceTree = "<group>"; };
 		29037B6C1DEE22FB0095E136 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -77,12 +80,19 @@
 		2957ABD21DEF1F4700B44554 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		2957ABD41DEF1F9400B44554 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		2957ABD51DEF1F9400B44554 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		2973BCC61DF1D7F400E157F8 /* UserList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserList+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2973BCC71DF1D7F400E157F8 /* UserList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserList+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2973BCC81DF1D7F400E157F8 /* TrollToken+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TrollToken+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2973BCC91DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TrollToken+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2976B8361DEE183000119389 /* HseFinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HseFinViewController.h; path = ../HseFinViewController.h; sourceTree = "<group>"; };
 		2976B8371DEE183000119389 /* HseFinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HseFinViewController.m; path = ../HseFinViewController.m; sourceTree = "<group>"; };
 		2976B8391DEE184A00119389 /* ProhseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProhseViewController.h; sourceTree = "<group>"; };
 		2976B83A1DEE184A00119389 /* ProhseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProhseViewController.m; sourceTree = "<group>"; };
-		3663F19385F770998C019BFF /* libPods-Printum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Printum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1A577E7A076B6282B34E7FA /* Pods-Printum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Printum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Printum/Pods-Printum.release.xcconfig"; sourceTree = "<group>"; };
+		45C6A5087564E45A35CF557A /* Pods-Printum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Printum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Printum/Pods-Printum.debug.xcconfig"; sourceTree = "<group>"; };
+		99E4F8A7C8437ECD389BE387 /* libPods-Printum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Printum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3729F02CD2EFB010332C0FD /* Pods-PrintumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrintumTests/Pods-PrintumTests.release.xcconfig"; sourceTree = "<group>"; };
+		D55BFC0A06728B5B0101427C /* Pods-Printum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Printum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Printum/Pods-Printum.release.xcconfig"; sourceTree = "<group>"; };
+		FDC5591C2DA144B851F201EB /* libPods-PrintumTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrintumTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC111408AD8459F70206AF3 /* libPods-Printum.a in Frameworks */,
+				53171018A2749A3AAF271F47 /* libPods-Printum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD5C54AD42ED21573CF7E70 /* libPods-PrintumTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,23 +122,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07AC18540B839F78E81CA6CD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2204B55530747DF2F7C098A6 /* Pods-Printum.debug.xcconfig */,
-				C1A577E7A076B6282B34E7FA /* Pods-Printum.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		1783D002FC74212BAA85FA89 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3663F19385F770998C019BFF /* libPods-Printum.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2909D7431DED9D0000AE88CF = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +129,8 @@
 				2909D76B1DED9D0100AE88CF /* PrintumTests */,
 				2909D7761DED9D0100AE88CF /* PrintumUITests */,
 				2909D74D1DED9D0100AE88CF /* Products */,
-				07AC18540B839F78E81CA6CD /* Pods */,
-				1783D002FC74212BAA85FA89 /* Frameworks */,
+				7C1320D6270BC9630FB29128 /* Pods */,
+				678EE77E90C92E3AACE47B11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +147,10 @@
 		2909D74E1DED9D0100AE88CF /* Printum */ = {
 			isa = PBXGroup;
 			children = (
+				2973BCC61DF1D7F400E157F8 /* UserList+CoreDataProperties.h */,
+				2973BCC71DF1D7F400E157F8 /* UserList+CoreDataProperties.m */,
+				2973BCC81DF1D7F400E157F8 /* TrollToken+CoreDataProperties.h */,
+				2973BCC91DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m */,
 				2909D7521DED9D0100AE88CF /* AppDelegate.h */,
 				2909D7531DED9D0100AE88CF /* AppDelegate.m */,
 				2909D7551DED9D0100AE88CF /* ViewController.h */,
@@ -209,6 +207,26 @@
 			path = PrintumUITests;
 			sourceTree = "<group>";
 		};
+		678EE77E90C92E3AACE47B11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99E4F8A7C8437ECD389BE387 /* libPods-Printum.a */,
+				FDC5591C2DA144B851F201EB /* libPods-PrintumTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C1320D6270BC9630FB29128 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45C6A5087564E45A35CF557A /* Pods-Printum.debug.xcconfig */,
+				D55BFC0A06728B5B0101427C /* Pods-Printum.release.xcconfig */,
+				029AA8F09C1984BE93842D92 /* Pods-PrintumTests.debug.xcconfig */,
+				C3729F02CD2EFB010332C0FD /* Pods-PrintumTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,12 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2909D77C1DED9D0100AE88CF /* Build configuration list for PBXNativeTarget "Printum" */;
 			buildPhases = (
-				267E3BFBD9578292C2459FFF /* [CP] Check Pods Manifest.lock */,
+				501DBF8222F7294B628A6BDD /* [CP] Check Pods Manifest.lock */,
 				2909D7481DED9D0000AE88CF /* Sources */,
 				2909D7491DED9D0000AE88CF /* Frameworks */,
 				2909D74A1DED9D0000AE88CF /* Resources */,
-				8D45F5584C0A3239C250EBC0 /* [CP] Embed Pods Frameworks */,
-				97AACF600B1FE4F121E50E03 /* [CP] Copy Pods Resources */,
+				606465E7C6FEDA172742B5CF /* [CP] Embed Pods Frameworks */,
+				35FB8103A5250318C6F30411 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2909D77F1DED9D0100AE88CF /* Build configuration list for PBXNativeTarget "PrintumTests" */;
 			buildPhases = (
+				B02E5645D892DAEBDC251E2F /* [CP] Check Pods Manifest.lock */,
 				2909D7641DED9D0100AE88CF /* Sources */,
 				2909D7651DED9D0100AE88CF /* Frameworks */,
 				2909D7661DED9D0100AE88CF /* Resources */,
+				F78303A3318B8BE9D9F3B2D1 /* [CP] Embed Pods Frameworks */,
+				7C0D6AA55BB29060E751BC00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -345,37 +366,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		267E3BFBD9578292C2459FFF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8D45F5584C0A3239C250EBC0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Printum/Pods-Printum-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		97AACF600B1FE4F121E50E03 /* [CP] Copy Pods Resources */ = {
+		35FB8103A5250318C6F30411 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -390,6 +381,81 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Printum/Pods-Printum-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		501DBF8222F7294B628A6BDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		606465E7C6FEDA172742B5CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Printum/Pods-Printum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C0D6AA55BB29060E751BC00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrintumTests/Pods-PrintumTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B02E5645D892DAEBDC251E2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F78303A3318B8BE9D9F3B2D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrintumTests/Pods-PrintumTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -401,8 +467,10 @@
 				2957ABD01DEF1EE600B44554 /* LoginViewController.m in Sources */,
 				2957ABD31DEF1F4700B44554 /* ProfileViewController.m in Sources */,
 				2909D7571DED9D0100AE88CF /* ViewController.m in Sources */,
+				2973BCCA1DF1D7F400E157F8 /* UserList+CoreDataProperties.m in Sources */,
 				2957ABCD1DEF1EB000B44554 /* RootViewController.m in Sources */,
 				2909D7541DED9D0100AE88CF /* AppDelegate.m in Sources */,
+				2973BCCB1DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m in Sources */,
 				2976B8381DEE183000119389 /* HseFinViewController.m in Sources */,
 				2976B83B1DEE184A00119389 /* ProhseViewController.m in Sources */,
 				2909D7511DED9D0100AE88CF /* main.m in Sources */,
@@ -471,6 +539,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -493,6 +562,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${PODS_ROOT}/Headers/Public/AFNetworking\n${PODS_ROOT}/Headers/Public/Bolts\n${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer\n${PODS_ROOT}/Headers/Public/RKValueTransformers\n${PODS_ROOT}/Headers/Public/RestKit",
+					"\n${PODS_ROOT}/Headers/Public/SOCKit\n${PODS_ROOT}/Headers/Public",
+					"${PODS_ROOT}/Headers/Public/Bolts",
+					"${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer",
+					"${PODS_ROOT}/Headers/Public/RKValueTransformers",
+					"${PODS_ROOT}/Headers/Public/RestKit",
+					"${PODS_ROOT}/Headers/Public/SOCKit",
+					"${PODS_ROOT}/Headers/Public",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -519,6 +598,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -535,6 +615,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${PODS_ROOT}/Headers/Public/AFNetworking\n${PODS_ROOT}/Headers/Public/Bolts\n${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer\n${PODS_ROOT}/Headers/Public/RKValueTransformers\n${PODS_ROOT}/Headers/Public/RestKit",
+					"\n${PODS_ROOT}/Headers/Public/SOCKit\n${PODS_ROOT}/Headers/Public",
+					"${PODS_ROOT}/Headers/Public/Bolts",
+					"${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer",
+					"${PODS_ROOT}/Headers/Public/RKValueTransformers",
+					"${PODS_ROOT}/Headers/Public/RestKit",
+					"${PODS_ROOT}/Headers/Public/SOCKit",
+					"${PODS_ROOT}/Headers/Public",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -545,30 +635,33 @@
 		};
 		2909D77D1DED9D0100AE88CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2204B55530747DF2F7C098A6 /* Pods-Printum.debug.xcconfig */;
+			baseConfigurationReference = 45C6A5087564E45A35CF557A /* Pods-Printum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Printum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = joyda.Printum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Pods/**";
 			};
 			name = Debug;
 		};
 		2909D77E1DED9D0100AE88CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1A577E7A076B6282B34E7FA /* Pods-Printum.release.xcconfig */;
+			baseConfigurationReference = D55BFC0A06728B5B0101427C /* Pods-Printum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Printum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = joyda.Printum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Pods/**";
 			};
 			name = Release;
 		};
 		2909D7801DED9D0100AE88CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 029AA8F09C1984BE93842D92 /* Pods-PrintumTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PrintumTests/Info.plist;
@@ -581,6 +674,7 @@
 		};
 		2909D7811DED9D0100AE88CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3729F02CD2EFB010332C0FD /* Pods-PrintumTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PrintumTests/Info.plist;

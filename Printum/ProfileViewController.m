@@ -64,6 +64,17 @@
     RootViewController *initView =  (RootViewController*)[storyboard instantiateViewControllerWithIdentifier:@"initialView"];
     [initView setModalPresentationStyle:UIModalPresentationFullScreen];
     [self presentViewController:initView animated:NO completion:nil];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"TrollToken"];
+    [fetchRequest setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *object in fetchedObjects)
+    {
+        [context deleteObject:object];
+    }
+    error = nil;
+    [context save:&error];
 }
 
 @end
