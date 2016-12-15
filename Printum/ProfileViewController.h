@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
-
+@property (nonatomic) BOOL authenticated2;
+@property (nonatomic,weak) NSString *ver;
 @end

@@ -15,7 +15,10 @@
 @end
 
 @interface RootViewController : UIViewController
-
+- (void) deleteAllObjectss:(NSString *) entityDescription22:(NSString *) entityDescription11;
 @property (nonatomic, weak) id <LoginViewProtocol> delegate;
 @property (nonatomic, retain) LoginViewController *loginView;
+@property (nonatomic,weak) NSString *val;
+@property (nonatomic) BOOL authenticated22;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinatorr;
 @end

@@ -35,21 +35,6 @@
         failure: ^(RKObjectRequestOperation *operation, NSError *error) {
             RKLogError(@"Load failed with error: %@", error);
         }];
-    
-    /*
-    [     [RKObjectManager sharedManager]
-     postObject: nil
-     path:@"/token"
-     parameters:[NSString stringWithFormat:@"userName=%@&password=%@&grant_type=%@", username,password,@"password"]
-     success: ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-         //articles have been saved in core data by now
-         [self fetchArticlesFromContext];
-         NSLog(@"@%",@"Entroooo");
-     }
-     failure: ^(RKObjectRequestOperation *operation, NSError *error) {
-         RKLogError(@"Load failed with error: %@", error);
-     }];
-*/
 }
 
 - (void)fetchArticlesFromContext:(NSString *)username{
@@ -58,77 +43,44 @@
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userName" ascending:YES];
     fetchRequest.sortDescriptors = @[descriptor];
     NSError *error = nil;
+    
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     TrollToken *trolll = [fetchedObjects firstObject];
-    
     NSLog(@"%@ Entrooo",trolll.userName);
     NSLog(@"%@ Entrooo",username);
     if ([trolll.userName isEqualToString:username]) {
+        
+        NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"UserList"
+                                                                inManagedObjectContext:context];
+        [object setValue:trolll.userName forKey:@"userName"];
+        [object setValue:trolll.trollTokens forKey:@"trollTokens"];
+        [object setValue:trolll.token_type forKey:@"token_type"];
+        NSError *error;
+        if (![context save:&error]) {
+            NSLog(@"Failed to save - error: %@", [error localizedDescription]);
+        }
         [[NSNotificationCenter defaultCenter] postNotificationName:@"loginActionFinished" object:self userInfo:nil];
         auth=true;
     }else{
         auth=false;
     }
-    //self.articles = [articleList.articles allObjects];
-    
-    //[self.tableView reloadData];
     
     
 }
 
-/*
-- (void)postToken:(TrollToen *)trolltoken
-{
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
-    RKObjectManager *manager = [RKObjectManager sharedManager];
-    RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[TrollToen class]];
-    NSArray *mappingArray = @[@"username", @"password", @"token_type"];
-    [responseMapping addAttributeMappingsFromArray:mappingArray];
-    
-    
-    
-    manager.requestSerializationMIMEType = RKMIMETypeJSON;
-    
-    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
-    RKResponseDescriptor *responseDescriptor =
-    [RKResponseDescriptor responseDescriptorWithMapping:responseMapping
-                                                 method:RKRequestMethodAny
-                                            pathPattern:@"/token"
-                                                keyPath:nil
-                                            statusCodes:statusCodes];
-    
-
-    RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
-    [requestMapping addAttributeMappingsFromArray:mappingArray];
-    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor
-                                              requestDescriptorWithMapping:requestMapping
-                                              objectClass:[TrollToen class]
-                                              rootKeyPath:nil
-                                              method:RKRequestMethodPOST];
-    [manager addResponseDescriptor:responseDescriptor];
-    [manager addRequestDescriptor:requestDescriptor];
-    
-    NSDictionary *params = @{
-                             @"username":   trolltoken.userName,
-                             @"password":  trolltoken.password,
-                             @"token_type": trolltoken.token_type
-                             };
-    auth =true;
-    [manager postObject:trolltoken path:@"/token" parameters:params
-                success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                    NSLog(@"SUCCESS: %@", mappingResult.array);
-                } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                    NSLog(@"FAILED: %@", error);
-                }];
-}
- */
 - (void)logout{
 
 }
 
 - (BOOL)userAuthenticated {
-    if (auth) {
+    NSError *error;
+    NSManagedObjectContext *context1 = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserList"];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userName" ascending:YES];
+    fetchRequest.sortDescriptors = @[descriptor];
+    NSInteger count = [context1 countForFetchRequest:fetchRequest error:&error];
+    NSLog(@"%lu  numero autesyyy... ",(unsigned long)count);
+    if (count>0) {
         return YES;
     }
     return NO;

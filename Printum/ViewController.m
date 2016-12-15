@@ -13,11 +13,13 @@
 @end
 
 @implementation ViewController
-
+@synthesize webApii;
+@synthesize datas;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+    NSURL *websiteUrl = [NSURL URLWithString:datas];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:websiteUrl];
+    [webApii loadRequest:urlRequest];
 }
 
 
