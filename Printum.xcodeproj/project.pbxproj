@@ -24,10 +24,17 @@
 		2957ABD01DEF1EE600B44554 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABCF1DEF1EE600B44554 /* LoginViewController.m */; };
 		2957ABD31DEF1F4700B44554 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABD21DEF1F4700B44554 /* ProfileViewController.m */; };
 		2957ABD61DEF1F9400B44554 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABD51DEF1F9400B44554 /* User.m */; };
+		2966D8B81DF82F8400FA501C /* FindCertiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2966D8B71DF82F8400FA501C /* FindCertiViewController.m */; };
 		2973BCCA1DF1D7F400E157F8 /* UserList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973BCC71DF1D7F400E157F8 /* UserList+CoreDataProperties.m */; };
 		2973BCCB1DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973BCC91DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m */; };
 		2976B8381DEE183000119389 /* HseFinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976B8371DEE183000119389 /* HseFinViewController.m */; };
 		2976B83B1DEE184A00119389 /* ProhseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976B83A1DEE184A00119389 /* ProhseViewController.m */; };
+		297CFB271DF74E52003076B2 /* FichaFinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CFB261DF74E52003076B2 /* FichaFinViewController.m */; };
+		297CFB2A1DF75140003076B2 /* FichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CFB291DF75140003076B2 /* FichaViewController.m */; };
+		297CFB2C1DF75761003076B2 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 297CFB2B1DF75761003076B2 /* add.png */; };
+		297CFB2F1DF757BC003076B2 /* EncuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CFB2E1DF757BC003076B2 /* EncuesViewController.m */; };
+		297CFB321DF757E2003076B2 /* ContacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297CFB311DF757E2003076B2 /* ContacViewController.m */; };
+		299444741E02D4DA00C500FD /* ViewControllerTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 299444731E02D4DA00C500FD /* ViewControllerTab.m */; };
 		53171018A2749A3AAF271F47 /* libPods-Printum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E4F8A7C8437ECD389BE387 /* libPods-Printum.a */; };
 		CBD5C54AD42ED21573CF7E70 /* libPods-PrintumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC5591C2DA144B851F201EB /* libPods-PrintumTests.a */; };
 /* End PBXBuildFile section */
@@ -80,6 +87,8 @@
 		2957ABD21DEF1F4700B44554 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		2957ABD41DEF1F9400B44554 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		2957ABD51DEF1F9400B44554 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		2966D8B61DF82F8300FA501C /* FindCertiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCertiViewController.h; sourceTree = "<group>"; };
+		2966D8B71DF82F8400FA501C /* FindCertiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCertiViewController.m; sourceTree = "<group>"; };
 		2973BCC61DF1D7F400E157F8 /* UserList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserList+CoreDataProperties.h"; sourceTree = "<group>"; };
 		2973BCC71DF1D7F400E157F8 /* UserList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserList+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2973BCC81DF1D7F400E157F8 /* TrollToken+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TrollToken+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -88,6 +97,17 @@
 		2976B8371DEE183000119389 /* HseFinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HseFinViewController.m; path = ../HseFinViewController.m; sourceTree = "<group>"; };
 		2976B8391DEE184A00119389 /* ProhseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProhseViewController.h; sourceTree = "<group>"; };
 		2976B83A1DEE184A00119389 /* ProhseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProhseViewController.m; sourceTree = "<group>"; };
+		297CFB251DF74E52003076B2 /* FichaFinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaFinViewController.h; sourceTree = "<group>"; };
+		297CFB261DF74E52003076B2 /* FichaFinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FichaFinViewController.m; sourceTree = "<group>"; };
+		297CFB281DF75140003076B2 /* FichaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaViewController.h; sourceTree = "<group>"; };
+		297CFB291DF75140003076B2 /* FichaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FichaViewController.m; sourceTree = "<group>"; };
+		297CFB2B1DF75761003076B2 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		297CFB2D1DF757BC003076B2 /* EncuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncuesViewController.h; sourceTree = "<group>"; };
+		297CFB2E1DF757BC003076B2 /* EncuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncuesViewController.m; sourceTree = "<group>"; };
+		297CFB301DF757E2003076B2 /* ContacViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacViewController.h; sourceTree = "<group>"; };
+		297CFB311DF757E2003076B2 /* ContacViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacViewController.m; sourceTree = "<group>"; };
+		299444721E02D4DA00C500FD /* ViewControllerTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTab.h; sourceTree = "<group>"; };
+		299444731E02D4DA00C500FD /* ViewControllerTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTab.m; sourceTree = "<group>"; };
 		45C6A5087564E45A35CF557A /* Pods-Printum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Printum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Printum/Pods-Printum.debug.xcconfig"; sourceTree = "<group>"; };
 		99E4F8A7C8437ECD389BE387 /* libPods-Printum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Printum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3729F02CD2EFB010332C0FD /* Pods-PrintumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrintumTests/Pods-PrintumTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +178,7 @@
 				2976B8361DEE183000119389 /* HseFinViewController.h */,
 				2976B8371DEE183000119389 /* HseFinViewController.m */,
 				2976B8391DEE184A00119389 /* ProhseViewController.h */,
+				2976B83A1DEE184A00119389 /* ProhseViewController.m */,
 				2957ABCB1DEF1EB000B44554 /* RootViewController.h */,
 				2957ABCC1DEF1EB000B44554 /* RootViewController.m */,
 				2957ABCE1DEF1EE600B44554 /* LoginViewController.h */,
@@ -167,7 +188,18 @@
 				2957ABD41DEF1F9400B44554 /* User.h */,
 				2957ABD51DEF1F9400B44554 /* User.m */,
 				29037B6C1DEE22FB0095E136 /* Main.storyboard */,
-				2976B83A1DEE184A00119389 /* ProhseViewController.m */,
+				297CFB251DF74E52003076B2 /* FichaFinViewController.h */,
+				297CFB261DF74E52003076B2 /* FichaFinViewController.m */,
+				297CFB281DF75140003076B2 /* FichaViewController.h */,
+				297CFB291DF75140003076B2 /* FichaViewController.m */,
+				297CFB2D1DF757BC003076B2 /* EncuesViewController.h */,
+				297CFB2E1DF757BC003076B2 /* EncuesViewController.m */,
+				297CFB301DF757E2003076B2 /* ContacViewController.h */,
+				297CFB311DF757E2003076B2 /* ContacViewController.m */,
+				2966D8B61DF82F8300FA501C /* FindCertiViewController.h */,
+				2966D8B71DF82F8400FA501C /* FindCertiViewController.m */,
+				299444721E02D4DA00C500FD /* ViewControllerTab.h */,
+				299444731E02D4DA00C500FD /* ViewControllerTab.m */,
 				2909D75E1DED9D0100AE88CF /* Assets.xcassets */,
 				2909D7601DED9D0100AE88CF /* LaunchScreen.storyboard */,
 				2909D7631DED9D0100AE88CF /* Info.plist */,
@@ -180,6 +212,7 @@
 		2909D74F1DED9D0100AE88CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				297CFB2B1DF75761003076B2 /* add.png */,
 				2900E2BF1DEF487400105299 /* News Filled-20.png */,
 				2900E2BD1DEF47D600105299 /* Contacts Filled-20.png */,
 				2909D7871DEDA12300AE88CF /* 2.jpg */,
@@ -342,6 +375,7 @@
 				2909D7621DED9D0100AE88CF /* LaunchScreen.storyboard in Resources */,
 				2900E2C01DEF487400105299 /* News Filled-20.png in Resources */,
 				29037B6D1DEE22FB0095E136 /* Main.storyboard in Resources */,
+				297CFB2C1DF75761003076B2 /* add.png in Resources */,
 				2909D75F1DED9D0100AE88CF /* Assets.xcassets in Resources */,
 				2909D7881DEDA12300AE88CF /* 2.jpg in Resources */,
 				2909D7861DED9E0F00AE88CF /* kotanprintum10.png in Resources */,
@@ -463,16 +497,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299444741E02D4DA00C500FD /* ViewControllerTab.m in Sources */,
+				297CFB2F1DF757BC003076B2 /* EncuesViewController.m in Sources */,
 				2957ABD61DEF1F9400B44554 /* User.m in Sources */,
 				2957ABD01DEF1EE600B44554 /* LoginViewController.m in Sources */,
 				2957ABD31DEF1F4700B44554 /* ProfileViewController.m in Sources */,
 				2909D7571DED9D0100AE88CF /* ViewController.m in Sources */,
 				2973BCCA1DF1D7F400E157F8 /* UserList+CoreDataProperties.m in Sources */,
 				2957ABCD1DEF1EB000B44554 /* RootViewController.m in Sources */,
+				297CFB2A1DF75140003076B2 /* FichaViewController.m in Sources */,
+				297CFB321DF757E2003076B2 /* ContacViewController.m in Sources */,
+				297CFB271DF74E52003076B2 /* FichaFinViewController.m in Sources */,
 				2909D7541DED9D0100AE88CF /* AppDelegate.m in Sources */,
 				2973BCCB1DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m in Sources */,
 				2976B8381DEE183000119389 /* HseFinViewController.m in Sources */,
 				2976B83B1DEE184A00119389 /* ProhseViewController.m in Sources */,
+				2966D8B81DF82F8400FA501C /* FindCertiViewController.m in Sources */,
 				2909D7511DED9D0100AE88CF /* main.m in Sources */,
 				2909D75D1DED9D0100AE88CF /* Printum.xcdatamodeld in Sources */,
 			);

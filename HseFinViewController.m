@@ -23,28 +23,20 @@
 
 - (IBAction)next:(id)sender {
     NSString *hol = labelJa.text;
-    NSLog(@"%@ Holll", hol);
-    [self passDataForward];
+    [self passDataForward :hol];
 }
-
-
-/*
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"continue"]){
-        //ProhseViewController *prohse =
- 
-        
-    }
+    ProhseViewController *pro;
+    pro = [segue destinationViewController];
+    pro.data = labelJa.text;
+    
 }
- */
-- (void)passDataForward
+- (void)passDataForward:(NSString *)username
 {
     ProhseViewController *secondViewController = [[ProhseViewController alloc] init];
-    secondViewController.data = labelJa.text; // Set the exposed property
-    //[self.navigationController pushViewController:secondViewController animated:YES];
+    secondViewController.data = username;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 @end

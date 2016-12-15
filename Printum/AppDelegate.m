@@ -8,101 +8,96 @@
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
 #import "AppDelegate.h"
+#import "RootViewController.h"
 #import "User.h"
 
 @interface AppDelegate ()
 @end
 @implementation AppDelegate
+@synthesize exit112;
+@synthesize authenticated;
+NSUInteger count;
+    NSInteger *i1 = 0;
+User *userObj;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    User *userObj = [[User alloc] init];
-    self.authenticated = [userObj userAuthenticated];
-    NSLog(@"Bool value: %d",[userObj userAuthenticated]);
-    NSLog(@"bool %s", self.authenticated ? "true" : "false");
-    
-    NSURL *baseURL = [NSURL URLWithString:@"http://192.168.0.98:8080"];
-    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
-    
-    
-    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-    
-    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    objectManager.managedObjectStore = managedObjectStore;
-    
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
-    
-    [managedObjectStore createPersistentStoreCoordinator];
-    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"PrintumDB.sqlite"];
-    NSString *seedPath = [[NSBundle mainBundle] pathForResource:@"RKSeedDatabase" ofType:@"sqlite"];
     NSError *error;
-    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:seedPath withConfiguration:nil options:nil error:&error];
-    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
+    if (i1==0) {
+        userObj = [[User alloc] init];
+    }
     
-    // Create the managed object contexts
-    [managedObjectStore createManagedObjectContexts];
-    
-    // Configure a managed object cache to ensure we do not create duplicate objects
-    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
-
-    RKEntityMapping *articleListMapping = [RKEntityMapping mappingForEntityForName:@"UserList" inManagedObjectStore:managedObjectStore];
-    articleListMapping.identificationAttributes = @[ @"userName" ];
-    
-    [articleListMapping
-     addAttributeMappingsFromDictionary:
-     @{
-       @"userName" : @"userName",
-       @"token_type" : @"token_type",
-       @"access_token" : @"trollTokens"
-       }
-     ];
-    
-    RKEntityMapping *articleMapping = [RKEntityMapping mappingForEntityForName:@"TrollToken" inManagedObjectStore:managedObjectStore];
-    articleMapping.identificationAttributes = @[ @"userName" ];
-    [articleMapping addAttributeMappingsFromArray:@[@"cities", @"cityId", @"companies", @"companyId", @"deparmentModels", @"departmentId", @"firtsName", @"lastName", @"userAddress" , @"userId" , @"userPhone" , @"userPhoto" ,@"token_type"]];
-    
-    [articleListMapping addPropertyMapping:
-     [RKRelationshipMapping relationshipMappingFromKeyPath:@"trollToken"
-                                                 toKeyPath:@"trollTokenr"
-                                               withMapping:articleMapping]
-     ];
-
-    RKResponseDescriptor *articleListResponseDescriptor =
-    [RKResponseDescriptor responseDescriptorWithMapping:articleListMapping
-                                                 method:RKRequestMethodPOST
-                                            pathPattern:@"/token"
-                                                keyPath:nil
-                                            statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)
-     
-     ];
-    
-    [objectManager addResponseDescriptor:articleListResponseDescriptor];
-    
-    // Enable Activity Indicator Spinner
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    //authenticated = [userObj userAuthenticated];
+        NSURL *baseURL = [NSURL URLWithString:@"http://192.168.0.98:8080"];
+        RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+        NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+        RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+        objectManager.managedObjectStore = managedObjectStore;
+        RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+        [managedObjectStore createPersistentStoreCoordinator];
+        NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"PrintumDB.sqlite"];
+        NSString *seedPath = [[NSBundle mainBundle] pathForResource:@"RKSeedDatabase" ofType:@"sqlite"];
+        NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:seedPath withConfiguration:nil options:nil error:&error];
+        NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
+        [managedObjectStore createManagedObjectContexts];
+        managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
+        RKEntityMapping *articleListMapping = [RKEntityMapping mappingForEntityForName:@"UserList" inManagedObjectStore:managedObjectStore];
+        articleListMapping.identificationAttributes = @[ @"userName" ];
+        [articleListMapping
+         addAttributeMappingsFromDictionary:
+         @{
+           @"userName" : @"userName",
+           @"token_type" : @"token_type",
+           @"access_token" : @"trollTokens"
+           }
+         ];
+        RKEntityMapping *articleMapping = [RKEntityMapping mappingForEntityForName:@"TrollToken" inManagedObjectStore:managedObjectStore];
+        articleMapping.identificationAttributes = @[ @"userName" ];
+        [articleMapping addAttributeMappingsFromArray:@[@"cities", @"cityId", @"companies", @"companyId", @"deparmentModels", @"departmentId", @"firtsName", @"lastName", @"userAddress" , @"userId" , @"userPhone" , @"userPhoto" ,@"token_type"]];
+        
+        [articleListMapping addPropertyMapping:
+         [RKRelationshipMapping relationshipMappingFromKeyPath:@"trollToken"
+                                                     toKeyPath:@"trollTokenr"
+                                                   withMapping:articleMapping]
+         ];
+        RKResponseDescriptor *articleListResponseDescriptor =
+        [RKResponseDescriptor responseDescriptorWithMapping:articleListMapping
+                                                     method:RKRequestMethodPOST
+                                                pathPattern:@"/token"
+                                                    keyPath:nil
+                                                statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)
+         
+         ];
+        [objectManager addResponseDescriptor:articleListResponseDescriptor];
+        [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+        authenticated = userObj.auth;
+    NSManagedObjectContext *context1 = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserList"];
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userName" ascending:YES];
     fetchRequest.sortDescriptors = @[descriptor];
-    NSUInteger count = [context countForFetchRequest:fetchRequest error:&error];
-    NSLog(@"%lu  numero aut1",(unsigned long)count);
+    NSInteger count = [context1 countForFetchRequest:fetchRequest error:&error];
+    NSLog(@"%lu  numero autesyyy... ",(unsigned long)count);
+    
     if (count>0)
+
+        
     {
-        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"profileView"];
+        i1++;
     }
     else
     {
-        UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"initialView"];
-        UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
-        
-        self.window.rootViewController = navigation;
+          self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"initialView"];
+         i1++;
     }
-    return YES;
+         
+        return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 
 }
-- (void) deleteAllObjects:(NSString *) entityDescription2  {
+- (void) deleteAllObjects:(NSString *) entityDescription2 :(NSString *) entityDescription {
+    exit112 = entityDescription;
     NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:entityDescription2];
     [fetchRequest setIncludesPropertyValues:YES];
@@ -135,12 +130,27 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+
+}
+-(void)resetApplicationModel{
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PrintumDB.sqlite"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [fileManager removeItemAtURL:storeURL error:NULL];
     
+    NSError* error = nil;
+    
+    if([fileManager fileExistsAtPath:[NSString stringWithContentsOfURL:storeURL encoding:NSASCIIStringEncoding error:&error]]){
+        [fileManager removeItemAtURL:storeURL error:nil];
+    }
+    self.managedObjectContext = nil;
+    self.persistentStoreCoordinator = nil;
 }
 
+- (NSURL *)applicationDocumentsDirectory {
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-
 }
 
 
@@ -150,8 +160,32 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-
-    [self saveContext];
+    if ([exit112 isEqualToString:@"salir"]) {
+        NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserList"];
+        [fetchRequest setIncludesPropertyValues:YES];
+        NSError *error;
+        error = nil;
+        NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+        for (NSManagedObject *object in fetchedObjects)
+        {
+            [context deleteObject:object];
+        }
+        NSFetchRequest *fetchRequest1 = [[NSFetchRequest alloc] initWithEntityName:@"UserList"];
+        NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userName" ascending:YES];
+        fetchRequest1.sortDescriptors = @[descriptor];
+        NSUInteger count = [context countForFetchRequest:fetchRequest1 error:&error];
+        NSLog(@"%lu  numero aut12",(unsigned long)count);
+        
+        if (![context save:&error]) {
+            NSLog(@"Save Failed! %@ %@", error, [error localizedDescription]);
+        }
+        NSPersistentStore *store = [self.persistentStoreCoordinator.persistentStores lastObject];
+        NSURL *storeURL = store.URL;
+        [self.persistentStoreCoordinator removePersistentStore:store error:&error];
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:&error];
+    }
+    //[self saveContext];
 }
 
 
