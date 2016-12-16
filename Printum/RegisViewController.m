@@ -9,6 +9,7 @@
 #import "RestKit/CoreData.h"
 #import "RegisViewController.h"
 #import "Users.h"
+#import "ResponseUsers.h"
 
 @interface RegisViewController ()
 
@@ -33,26 +34,16 @@
     users1.UserAddress= direcc.text;
     users1.UserPhone = telel.text;
     users1.User_Photo= @"(~/Content/StatePho/1.jpg";
-    
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    [dictionary setValue:users1.UserName forKey:@"UserName"];
-     [dictionary setValue:users1.FirtsName forKey:@"FirtsName"];
-     [dictionary setValue:users1.LastName forKey:@"LastName"];
-    [dictionary setObject:[NSNumber numberWithInt: users1.nit_Number]
-                       forKey:@"nit_Number"];
-    [dictionary setObject:[NSNumber numberWithInt: users1.cedula]
-                   forKey:@"cedula"];
-     [dictionary setValue:users1.UserAddress forKey:@"UserAddress"];
-    [dictionary setValue:users1.UserPhone forKey:@"UserPhone"];
-    [dictionary setValue:users1.User_Photo forKey:@"User_Photo"];
-
     RKObjectManager *obje =  [RKObjectManager sharedManager];
-    [obje postObject: dictionary
-                path:@"/Api/Users"
+    obje.requestSerializationMIMEType = RKMIMETypeJSON;
+    [obje postObject: users1
+                path:@"Api/Users"
           parameters: nil
              success: ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                 
+                  ResponseUsers *result = [mappingResult firstObject];
                  NSLog(@"@%",@"Entroooo");
+                 UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Confir"];
+                 UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
              }
              failure: ^(RKObjectRequestOperation *operation, NSError *error) {
                  RKLogError(@"Load failed with error: %@", error);

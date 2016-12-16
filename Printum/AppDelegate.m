@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "User.h"
+#import "Users.h"
+#import "ResponseUsers.h"
 
 @interface AppDelegate ()
 @end
@@ -71,6 +73,31 @@ User *userObj;
          
          ];
         [objectManager addResponseDescriptor:articleListResponseDescriptor];
+    RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
+    
+    [requestMapping addAttributeMappingsFromArray:@[@"UserName", @"FirtsName",@"LastName",@"nit_Number",@"cedula",@"UserAddress",@"UserPhone",@"User_Photo",@"UserId",@"DeparmentId",@"CityId",@"CompanyId"]];
+    
+    RKObjectMapping* responseMapping = [RKObjectMapping mappingForClass:[ResponseUsers class]];
+    [articleMapping addAttributeMappingsFromDictionary:@{
+                                                         @"data": @"data",
+                                                         @"message": @"message"
+                                                        
+                }];
+    
+    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping
+                                                                                   objectClass:[Users class]                   rootKeyPath:nil
+                                  method:RKRequestMethodPOST];
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping
+                                                                                            method:RKRequestMethodPOST
+                                   pathPattern:@"Api/Users"
+                                     keyPath:nil
+                             statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    [objectManager addRequestDescriptor:requestDescriptor];
+    [objectManager addResponseDescriptor:responseDescriptor];
+    
+    
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
         authenticated = userObj.auth;
     NSManagedObjectContext *context1 = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
