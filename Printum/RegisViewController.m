@@ -17,10 +17,15 @@
 
 @implementation RegisViewController
 
-@synthesize nit,nombes,cedul,apelli,direcc,telel,emails;
+@synthesize nit,nombes,cedul,apelli,direcc,telel,emails,back;
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    
+}
+- (IBAction)back:(id)sender {
+    UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"initialView"];
+    UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
     
 }
 - (IBAction)regis:(id)sender {

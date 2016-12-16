@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *telel;
 @property (weak, nonatomic) IBOutlet UITextField *emails;
 
+@property (weak, nonatomic) IBOutlet UIButton *back;
 @property (weak, nonatomic) IBOutlet UITextField *nombes;
 @end

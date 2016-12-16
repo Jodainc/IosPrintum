@@ -14,7 +14,11 @@
 
 @implementation LoginViewController
 @synthesize userName;
-@synthesize trollPass;
+@synthesize trollPass,back12;
+- (IBAction)back123:(id)sender {
+    UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"initialView"];
+    UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
