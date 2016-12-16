@@ -31,6 +31,9 @@ User *userObj;
         NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
         RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
         objectManager.managedObjectStore = managedObjectStore;
+    
+           // objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
+    //[objectManager setRequestSerializationMIMEType:RKMIMETypeJSON];
         RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
         RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
         [managedObjectStore createPersistentStoreCoordinator];

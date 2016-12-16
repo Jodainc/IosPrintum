@@ -20,6 +20,9 @@
 		2909D7781DED9D0100AE88CF /* PrintumUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909D7771DED9D0100AE88CF /* PrintumUITests.m */; };
 		2909D7861DED9E0F00AE88CF /* kotanprintum10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2909D7851DED9E0F00AE88CF /* kotanprintum10.png */; };
 		2909D7881DEDA12300AE88CF /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2909D7871DEDA12300AE88CF /* 2.jpg */; };
+		2918729F1E03FDD200EF0BF3 /* image001.png in Resources */ = {isa = PBXBuildFile; fileRef = 2918729E1E03FDD200EF0BF3 /* image001.png */; };
+		2918BB031E0330880013737A /* RegisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2918BB021E0330880013737A /* RegisViewController.m */; };
+		2918BB061E0337E00013737A /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 2918BB051E0337E00013737A /* Users.m */; };
 		2957ABCD1DEF1EB000B44554 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABCC1DEF1EB000B44554 /* RootViewController.m */; };
 		2957ABD01DEF1EE600B44554 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABCF1DEF1EE600B44554 /* LoginViewController.m */; };
 		2957ABD31DEF1F4700B44554 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2957ABD21DEF1F4700B44554 /* ProfileViewController.m */; };
@@ -79,6 +82,11 @@
 		2909D7791DED9D0100AE88CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2909D7851DED9E0F00AE88CF /* kotanprintum10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kotanprintum10.png; sourceTree = "<group>"; };
 		2909D7871DEDA12300AE88CF /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		2918729E1E03FDD200EF0BF3 /* image001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image001.png; sourceTree = "<group>"; };
+		2918BB011E0330880013737A /* RegisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisViewController.h; sourceTree = "<group>"; };
+		2918BB021E0330880013737A /* RegisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisViewController.m; sourceTree = "<group>"; };
+		2918BB041E0337E00013737A /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		2918BB051E0337E00013737A /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		2957ABCB1DEF1EB000B44554 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		2957ABCC1DEF1EB000B44554 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2957ABCE1DEF1EE600B44554 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -188,6 +196,8 @@
 				2957ABD41DEF1F9400B44554 /* User.h */,
 				2957ABD51DEF1F9400B44554 /* User.m */,
 				29037B6C1DEE22FB0095E136 /* Main.storyboard */,
+				2918BB041E0337E00013737A /* Users.h */,
+				2918BB051E0337E00013737A /* Users.m */,
 				297CFB251DF74E52003076B2 /* FichaFinViewController.h */,
 				297CFB261DF74E52003076B2 /* FichaFinViewController.m */,
 				297CFB281DF75140003076B2 /* FichaViewController.h */,
@@ -200,6 +210,8 @@
 				2966D8B71DF82F8400FA501C /* FindCertiViewController.m */,
 				299444721E02D4DA00C500FD /* ViewControllerTab.h */,
 				299444731E02D4DA00C500FD /* ViewControllerTab.m */,
+				2918BB011E0330880013737A /* RegisViewController.h */,
+				2918BB021E0330880013737A /* RegisViewController.m */,
 				2909D75E1DED9D0100AE88CF /* Assets.xcassets */,
 				2909D7601DED9D0100AE88CF /* LaunchScreen.storyboard */,
 				2909D7631DED9D0100AE88CF /* Info.plist */,
@@ -213,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				297CFB2B1DF75761003076B2 /* add.png */,
+				2918729E1E03FDD200EF0BF3 /* image001.png */,
 				2900E2BF1DEF487400105299 /* News Filled-20.png */,
 				2900E2BD1DEF47D600105299 /* Contacts Filled-20.png */,
 				2909D7871DEDA12300AE88CF /* 2.jpg */,
@@ -372,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2918729F1E03FDD200EF0BF3 /* image001.png in Resources */,
 				2909D7621DED9D0100AE88CF /* LaunchScreen.storyboard in Resources */,
 				2900E2C01DEF487400105299 /* News Filled-20.png in Resources */,
 				29037B6D1DEE22FB0095E136 /* Main.storyboard in Resources */,
@@ -512,6 +526,8 @@
 				2973BCCB1DF1D7F400E157F8 /* TrollToken+CoreDataProperties.m in Sources */,
 				2976B8381DEE183000119389 /* HseFinViewController.m in Sources */,
 				2976B83B1DEE184A00119389 /* ProhseViewController.m in Sources */,
+				2918BB031E0330880013737A /* RegisViewController.m in Sources */,
+				2918BB061E0337E00013737A /* Users.m in Sources */,
 				2966D8B81DF82F8400FA501C /* FindCertiViewController.m in Sources */,
 				2909D7511DED9D0100AE88CF /* main.m in Sources */,
 				2909D75D1DED9D0100AE88CF /* Printum.xcdatamodeld in Sources */,
