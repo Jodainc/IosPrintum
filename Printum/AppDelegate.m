@@ -28,7 +28,7 @@ User *userObj;
     }
     
     //authenticated = [userObj userAuthenticated];
-        NSURL *baseURL = [NSURL URLWithString:@"http://192.168.0.98:8080"];
+        NSURL *baseURL = [NSURL URLWithString:@"http://printumsaa.zapto.org:8080"];
         RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
         NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
         RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];

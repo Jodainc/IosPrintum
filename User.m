@@ -23,7 +23,7 @@
     RKObjectManager * obje =  [RKObjectManager sharedManager];
     //obje.requestSerializationMIMEType.stringByRemovingPercentEncoding;
     
-    NSDictionary *dic = @{@"userName":username,@"password":password,@"grant_type":@"password"};
+    NSDictionary *dic = @{@"username":username,@"password":password,@"grant_type":@"password"};
     [obje postObject: nil
            path:@"/token"
           parameters:dic

@@ -5,11 +5,12 @@
 //  Created by JoyDa on 12/7/16.
 //  Copyright © 2016 JoyDa. All rights reserved.
 //
-
+#import <RestKit/RestKit.h>
+#import <RestKit/CoreData.h>
 #import "FindCertiViewController.h"
 #import "ViewController.h"
 #import "AFNetworking.h"
-
+#import "TrollToken+CoreDataClass.h"
 @interface FindCertiViewController ()
 
 @end
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
     self.finishedGooglePlacesArray = [[NSMutableArray  alloc] init];
     NSString *text1;
-    text1 = @"http://192.168.0.98:8080/Api/Pro_Certificados/212-1-3480";
+    text1 = @"http://printumsaa.zapto.org:8080/Api/Pro_Certificados/212-1-3480";
     [self makeRestuarantsRequests:text1];
     [tableView reloadData];
 }
@@ -30,7 +31,7 @@
      [tableView reloadData];
     NSString *text1;
     NSString *text = jText.text;
-            text1 = [NSString stringWithFormat:@"http://192.168.0.98:8080/Api/Pro_Certificados/%@", text];
+            text1 = [NSString stringWithFormat:@"http://printumsaa.zapto.org:8080/Api/Pro_Certificados/%@", text];
     self.finishedGooglePlacesArray = [[NSMutableArray  alloc] init];
     [self makeRestuarantsRequests:text1];
     [tableView reloadData];
@@ -46,10 +47,22 @@
 }
 -(void)makeRestuarantsRequests :(NSString *) a{
     NSURL *url = [NSURL URLWithString:a];
+    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserList"];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userName" ascending:YES];
+    fetchRequest.sortDescriptors = @[descriptor];
+    NSError *error = nil;
     
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    TrollToken *trolll = [fetchedObjects firstObject];
+    NSString *a164 = trolll.token_type;
+    a164 = [a164 stringByAppendingString:@" "];
+    NSString *a165 = trolll.trollTokens;
+    NSString *textoRetorno = [a164 stringByAppendingString:a165];
+        NSLog(@"Request Failed with Error: %@, %@", error, textoRetorno);
     //NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setValue: @"Bearer HwlTHUt-Fn3Em_rXgf6HCgX19ItiQioOWAUcIkEILraHi6O5bDHD57siFhPVWv7ofD_UzmA5pvF4Rwn6WKOV1gDSwSB5ERG-d5D6gty2WG1dT7J7t4h2IzJ4m5a6V_6Q7QnHmJbqzjoKSrTgS4UR0ddTv5xrxpQOxAlSPlT_CnDdTFo-4w1pPfTF7ubLe_HRowCbHsMYJ5hRwI-9PjYKk6jGTo-HaMJkMB8SK7zV_6rJG6pe4Sc-2XXWLgucxO5WdMZt7uQnagP1fmtsgYT3oqcmf4AJoq4BgzrAa8YQa0Muh_9x7uz8JJ1iz5SpPhK2pgiGvEzXbYiaaS18aO08Ds1lbOAdFbAGjVRcpsbfpH5fSm0lyd07037NR0vvulZ9ALoAuGT1Wo5EPjeFIsBoiRkffLr268_uH2IdJWslwZIZ7ZVr1S_4lJujMH0TdmIquvHTcbEmO70S4s8LxKvhfFZQ2j4nmn0Z7ZCmvC2p1oc8R5b-Bnmov133i3Hwu-P8zBxGTlWmwPylTt6N6iEK6NRcv5RCW4X_oe5ufMYyjZ8"  forHTTPHeaderField:@"Authorization"];
+    [request setValue: textoRetorno  forHTTPHeaderField:@"Authorization"];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation
                                          JSONRequestOperationWithRequest:request
                                          success:^(NSURLRequest *request, NSHTTPURLResponse *response, id responseObject)

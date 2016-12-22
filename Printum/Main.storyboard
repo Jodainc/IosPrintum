@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image001.png" translatesAutoresizingMaskIntoConstraints="NO" id="EkI-3Z-hFs">
-                                <rect key="frame" x="44" y="96" width="326" height="454"/>
+                                <rect key="frame" x="44" y="52" width="326" height="498"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEx-0b-axz">
                                 <rect key="frame" x="40" y="325" width="122" height="30"/>
@@ -620,8 +620,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="n. rEFERENCIA pRODUCTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7H-N2-UbQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="n. rEFERENCIA pRODUCTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7H-N2-UbQ">
                                 <rect key="frame" x="0.0" y="72" width="414" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -646,16 +647,8 @@
                                     <segue destination="vNd-1r-b1w" kind="push" identifier="continue" id="hjd-2i-cxZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhv-CL-nTh">
-                                <rect key="frame" x="152" y="177" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="k7H-N2-UbQ" firstAttribute="centerY" secondItem="bwT-lF-uZz" secondAttribute="centerY" constant="-282.5" id="0vf-es-vgz"/>
-                            <constraint firstItem="k7H-N2-UbQ" firstAttribute="centerX" secondItem="bwT-lF-uZz" secondAttribute="centerX" id="Dal-Id-M1p"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="hOJAS dE sEGURIDAD" id="jNa-Md-fXW"/>
                     <connections>
@@ -666,7 +659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igo-ua-Ipy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5257.971014492754" y="-285.32608695652175"/>
+            <point key="canvasLocation" x="5105.7971014492759" y="-707.60869565217399"/>
         </scene>
         <!--hOJAS dE sEGURIDAD-->
         <scene sceneID="c42-2Z-Gn4">
@@ -826,20 +819,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="n. rEFERENCIA pRODUCTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyh-uL-0QN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="n. rEFERENCIA pRODUCTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyh-uL-0QN">
                                 <rect key="frame" x="0.0" y="72" width="414" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-kU-E4A">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-kU-E4A">
                                 <rect key="frame" x="0.0" y="101" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CP-Vw-LX0">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CP-Vw-LX0">
                                 <rect key="frame" x="0.0" y="135" width="414" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="bUSCAR">
                                     <color key="titleColor" red="0.2705674629" green="0.029641513800000002" blue="0.037304694149999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -850,14 +846,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ccr-kU-E4A" firstAttribute="centerY" secondItem="RZt-Yh-pku" secondAttribute="centerY" constant="-252" id="5bP-me-0dL"/>
-                            <constraint firstItem="lyh-uL-0QN" firstAttribute="centerY" secondItem="RZt-Yh-pku" secondAttribute="centerY" constant="-282.5" id="dq6-82-a43"/>
-                            <constraint firstItem="lyh-uL-0QN" firstAttribute="centerX" secondItem="RZt-Yh-pku" secondAttribute="centerX" id="fLr-jS-Ibh"/>
-                            <constraint firstItem="ccr-kU-E4A" firstAttribute="centerX" secondItem="RZt-Yh-pku" secondAttribute="centerX" id="fVs-tL-Txw"/>
-                            <constraint firstItem="6CP-Vw-LX0" firstAttribute="centerY" secondItem="RZt-Yh-pku" secondAttribute="centerY" constant="-214" id="lxI-cn-ZkZ"/>
-                            <constraint firstItem="6CP-Vw-LX0" firstAttribute="centerX" secondItem="RZt-Yh-pku" secondAttribute="centerX" id="xcP-a1-dAe"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="fICHAS tECNICAS" id="Ill-V5-nLy"/>
                     <connections>

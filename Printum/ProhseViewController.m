@@ -18,7 +18,7 @@
         NSLog(@"%@ ii",data);
             [super viewDidLoad];
     if (i<=0) {
-        textOutput = [NSString stringWithFormat:@"http://192.168.0.98:8080/pRO_hsEG/PDF/%@", data];
+        textOutput = [NSString stringWithFormat:@"http://printumsaa.zapto.org:8080/pRO_hsEG/PDF/%@", data];
         i++;
     }
     NSURL *websiteUrl = [NSURL URLWithString:textOutput];
